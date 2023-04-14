@@ -23,5 +23,5 @@ if [ -n "${USE_PROXY}" ]; then
 		--allow-websocket-origin=${DOMAIN_VALUE} \
 		--use-xheaders
 else
-	python3 ${WORK_PATH}/serve.py --port=${PORT_VALUE}
+	python3 ${WORK_PATH}/serve.py --port=${PORT_VALUE} --allow-websocket-origin=${DOMAIN_VALUE}:${PORT_VALUE}
 fi
